@@ -8,12 +8,16 @@ import httpx
 
 # 3rd party imports
 import streamlit as st
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # fetch the api url
 try:
     API_URL = st.secrets["API_URL"]
 except Exception:
-    API_URL = os.getenv("API_URL", "http://localhost:8000/chat")
+    API_URL = os.getenv("API_URL", "http://localhost:3000/chat")
 
 # create a title and chat container
 st.title("📅 Calendar Booking Assistant")
