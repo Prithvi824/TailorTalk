@@ -9,10 +9,10 @@ from typing import List
 # 3rd party imports
 from langchain_openai import ChatOpenAI
 from langchain.tools import StructuredTool
-from .google_calendar import GoogleCalendar
 from langchain.agents import initialize_agent, AgentType
 
 # local imports
+from .google_calendar import GoogleCalendar
 from .config import OPENAI_API_KEY, OPENAI_MODEL, SCOPES, GOOGLE_CREDS_JSON
 from .pydantic_models import (
     CheckAvailability,
